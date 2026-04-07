@@ -114,7 +114,7 @@ function WeatherUi(props){
                             </div>
                             <div className='position-relative'>
                             <b style={{fontSize:'20px'}} className='position-absolute pt-3 px-3'>{temp}{props.weatherdata && props.weatherdata.main?<span><sup>o</sup>c</span>:""}</b>
-                            <img src={props.weatherdata && props.weatherdata.main?image:''} style={{width:'70px'}}/>
+                            <img src={props.weatherdata && props.weatherdata.main?image:''} style={{width:'70px'}} alt='weather data'/>
                             </div>
                         </div>
                         <div className='d-flex flex-column  '>
@@ -215,7 +215,7 @@ function WeatherUi(props){
                         {props.forecast?.list[0] ? props.forecast.list.slice(1,8).map((element,index)=>(
                       <div className=' d-flex align-items-center flex-column'>
                         <p>{new Date(element.dt_txt).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</p>
-                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}}></img>
+                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}} alt='opem weather'></img>
                         <p>{feranitetocelceious(element.main.temp).toFixed()}{props.weatherdata && props.weatherdata.main? <sup>o</sup> :" "}{props.weatherdata && props.weatherdata.main? <b>c</b> :" "}</p>
                       </div>
                       )):""}
@@ -229,7 +229,7 @@ function WeatherUi(props){
                         {props.forecast?.list[0] ? props.forecast.list.slice(9,16).map((element,index)=>(
                       <div className=' d-flex align-items-center flex-column'>
                         <p>{new Date(element.dt_txt).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</p>
-                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}}></img>
+                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}} alt='forget'></img>
                         <p>{feranitetocelceious(element.main.temp).toFixed()}{props.weatherdata && props.weatherdata.main? <sup>o</sup> :" "}{props.weatherdata && props.weatherdata.main? <b>c</b> :" "}</p>
                       </div>
                       )):""}
@@ -243,7 +243,7 @@ function WeatherUi(props){
                         {props.forecast?.list[0] ? props.forecast.list.slice(17,24).map((element,index)=>(
                       <div className=' d-flex align-items-center flex-column'>
                         <p>{new Date(element.dt_txt).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</p>
-                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}}></img>
+                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}} alt='forget'></img>
                         <p>{feranitetocelceious(element.main.temp).toFixed()}{props.weatherdata && props.weatherdata.main? <sup>o</sup> :" "}{props.weatherdata && props.weatherdata.main? <b>c</b> :" "}</p>
                       </div>
                       )):""}
@@ -257,7 +257,7 @@ function WeatherUi(props){
                         {props.forecast?.list[0] ? props.forecast.list.slice(25,32).map((element,index)=>(
                       <div className=' d-flex align-items-center flex-column'>
                         <p>{new Date(element.dt_txt).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</p>
-                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}}></img>
+                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}} alt='weather icon'></img>
                         <p>{feranitetocelceious(element.main.temp).toFixed()}{props.weatherdata && props.weatherdata.main? <sup>o</sup> :" "}{props.weatherdata && props.weatherdata.main? <b>c</b> :" "}</p>
                       </div>
                       )):""}
@@ -271,7 +271,7 @@ function WeatherUi(props){
                         {props.forecast?.list[0] ? props.forecast.list.slice(33,40).map((element,index)=>(
                       <div className=' d-flex align-items-center flex-column'>
                         <p>{new Date(element.dt_txt).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) }</p>
-                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}}></img>
+                        <img src={`http://openweathermap.org/img/wn/${element.weather[0].icon}.png`} style={{width:'70px'}} alt='forget'></img>
                         <p>{feranitetocelceious(element.main.temp).toFixed()}{props.weatherdata && props.weatherdata.main? <sup>o</sup> :" "}{props.weatherdata && props.weatherdata.main? <b>c</b> :" "}</p>
                       </div>
                       )):""}

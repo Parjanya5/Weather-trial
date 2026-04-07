@@ -4,7 +4,7 @@ import Load from '../load.gif'
 export default function spinner() {
   return (
     <div>
-      <img src={Load}></img>
+      <img src={Load} alt='forget'></img>
     </div>
   )
 }
