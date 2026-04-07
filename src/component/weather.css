@@ -1,0 +1,43 @@
+.forecast::-webkit-scrollbar{
+    display: none;
+   
+}
+.forecast{
+    --bs-bg-opacity: .2;
+}
+.day-forecast{
+    --bs-bg-opacity: .2;
+}
+/* .itz{
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay:0s ;
+    transform: rotate(360deg);
+ } */
+ /* .itz:active{
+    transform: rotate(320deg);
+ } */
+
+ /* Media Query */
+ @media (max-width: 599px) {
+   .media{
+    display: none;
+   }
+   .gapping{
+    gap: 10px;
+   }
+   .margin{
+    margin-top: 0px;
+   }
+   .weather-component-height{
+    height: 200px;
+   }
+}
+.gaping{
+    gap: 50px;
+}
+.margin{
+    margin-top: 70px;
+}
+
